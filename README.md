@@ -2,15 +2,15 @@
 
 Customer Service REST API (RAML +Mulesoft)
 
-Date: 12/02/2018
-Solution Deliverables :- 
-  Integration Specification : Integration Spec -CustomerAPI v1.0.doc
-  Code Base : Anypoint workspace [customerservicev2]
-  Deployed in Cloud : http://customerservicev2.cloudhub.io/api/customers
-  Mock Service : https://mocksvc.mulesoft.com/mocks/12bb4c53-de2f-42a4-a16f-dad240c9e511/customers/
+Date: 12/02/2018 <BR>
+Solution Deliverables : <BR>
+  Integration Specification : Integration Spec -CustomerAPI v1.0.doc <BR>
+  Code Base : Anypoint workspace [customerservicev2] <BR>
+  Deployed in Cloud : http://customerservicev2.cloudhub.io/api/customers <BR>
+  Mock Service : https://mocksvc.mulesoft.com/mocks/12bb4c53-de2f-42a4-a16f-dad240c9e511/customers/ <BR>
 
-
-Requirement:-
+<BR><BR>
+Requirement: <BR>
 Design a RESTful API using RAML that contains a single resource, customers, and allows the following:
  
 1.	List customers
