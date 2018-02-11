@@ -1,0 +1,40 @@
+[{
+"id":1,  
+"firstName":"Harry",
+"lastName":"Potter",
+"address":"1 Pitt St Sydney"
+},
+{
+"id":2,
+"firstName":"Ron",
+"lastName":"Weasley",
+"address":"2 Pitt St Sydney"
+}
+,
+{
+"id":3,
+"firstName":"Hermione",
+"lastName":"Granger",
+"address":"3 Pitt St Sydney"
+}
+,
+{
+"id":4,
+"firstName":"Albus",
+"lastName":"Dumbledore",
+"address":"4 Pitt St Sydney"
+}
+,
+{
+"id":5,
+"firstName":"Severus",
+"lastName":"Snape",
+"address":"5 Pitt St Sydney"
+}
+,
+{
+"id":6,
+"firstName":"Rubeus",
+"lastName":"Hagrid",
+"address":"6 Pitt St Sydney"
+}]

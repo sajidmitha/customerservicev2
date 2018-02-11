@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+# This is the file /libraries/securitySchemes.raml
+securitySchemes:
+  basicAuth:
+    description: Request must contain  headers necessary for basic authentication
+    type: Basic Authentication
+    describedBy:
+      headers:
+        Authorization:
+          description: Used to send the Base64 encoded "username:password"
+          type: string
+      responses:
+        401:
+          description: |
+            Unauthorized. Either the provided username and password                 combination is invalid, or the user is not allowed to access the content provided by the requested URL.

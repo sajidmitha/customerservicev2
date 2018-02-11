@@ -1,0 +1,139 @@
+#%RAML 1.0
+baseUri: https://mocksvc.mulesoft.com/mocks/12bb4c53-de2f-42a4-a16f-dad240c9e511 # 
+title: Customer Service API
+documentation:
+- title: Overview
+  content: |
+      This document defines the interface for customer REST services.
+- title: Copyright
+  content: Copyright 2018 by Sajid Mitha. All rights reserved.
+version: v2
+uses : 
+  security: libraries/securitySchemes.raml 
+protocols: [HTTPS]
+mediaType: application/json
+securedBy: [ security.basicAuth ]
+types:
+  Error: !include types/error.raml
+  Customer: !include types/customer.raml
+/customers:
+    get:
+      description: This is used to get customers,list all matching query criteria, if provided;otherwise list all Customers
+      queryParameters:
+        firstName?: string
+      responses: 
+        200:
+          body:
+            application/json:
+              example: !include examples/customers.json 
+        404:
+           body:
+            application/json:
+                type: Error
+                example: |
+                  {
+                    "code":404,
+                    "message":"Snap Get Err ! Check something missing."
+                  }
+    post:
+      description: Create a new Customer
+      body: 
+        application/json:
+          type: Customer
+          example: !include examples/customer.json 
+      responses: 
+        201:
+          body: 
+            application/json:
+              example: |
+                {
+                "message":"Customer created {but not really"
+                }
+        404:
+           body:
+            application/json:
+                type: Error
+                example: |
+                  {
+                    "code":404,
+                    "message":"Snap Create Err ! Check something missing."
+                  }
+    /{id}:
+      get:
+        description: Get a Customer by id
+        responses: 
+          200:
+            body: 
+              application/json:
+                type: Customer
+                example: !include examples/customer.json 
+          404:
+           body:
+            application/json:
+                type: Error
+                example: |
+                  {
+                    "code":404,
+                    "message":"Snap Get Err ! Check something missing."
+                  }        
+      put:
+       description: Update a Customer by id
+       body: 
+        application/json:
+          type: Customer
+          example: !include examples/customer.json
+       responses: 
+        201:
+          body: 
+            application/json:
+              example: |
+                {
+                "message":"Customer updated {but not really"
+                }
+        404:
+           body:
+            application/json:
+                type: Error
+                example: |
+                  {
+                    "code":404,
+                    "message":"Snap Update Err ! Check something missing."
+                  }
+      delete:
+       responses: 
+        201:
+          body: 
+            application/json:
+              example: |
+                {
+                "message":"Customer deleted {but not really"
+                }
+        404:
+           body:
+            application/json:
+                type: Error
+                example: |
+                  {
+                    "code":404,
+                    "message":"Snap Delete Err ! Check something missing."
+                  }
+    /search:
+      get:
+        description: Search Customer by first name
+        queryParameters:
+         firstName: string
+        responses: 
+          200:
+            body: 
+              application/json:
+                type: Customer
+                example: !include examples/customer.json
+          404:
+           body:
+            application/json:
+                type: Error
+                example: |
+                  {
+                    "code":404,
+                    "message":"Snap Search Err ! Check something missing."
+                  }
