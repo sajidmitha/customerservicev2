@@ -3,7 +3,8 @@
 Customer Service REST API (RAML +Mulesoft)
 
 Date: 12/02/2018 <BR>
-Solution Deliverables : <BR>
+Solution Deliverables : <BR><BR>
+  
   Integration Specification : Integration Spec -CustomerAPI v1.0.doc <BR>
   Code Base : Anypoint workspace [customerservicev2] <BR>
   Deployed in Cloud : http://customerservicev2.cloudhub.io/api/customers <BR>
